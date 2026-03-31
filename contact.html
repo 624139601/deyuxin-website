@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 | 德裕新塑胶 — Contact | Deyuxin Plastics</title>
+  <meta name="description" content="联系德裕新塑胶，获取免费打样和专属报价。电话：0760-86581786，手机：175-1292-1013。地址：广东省中山市坦洲镇彩虹路15号。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+    [data-reveal].revealed{opacity:1;transform:none}
+    [data-reveal-delay="1"]{transition-delay:.1s}[data-reveal-delay="2"]{transition-delay:.2s}
+    .map-container{
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      height:320px;
+      background:var(--gray-200);
+      margin-top:32px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:12px;
+      color:var(--gray-500);
+    }
+    .map-container iframe{width:100%;height:100%;border:none;}
+    .faq-list{max-width:720px;margin:0 auto}
+    .faq-item{background:white;border-radius:var(--radius);padding:24px 28px;margin-bottom:16px;box-shadow:var(--shadow-sm);cursor:pointer;transition:var(--transition)}
+    .faq-item:hover{box-shadow:var(--shadow-md)}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--blue);font-size:1rem}
+    .faq-a{font-size:.9rem;color:var(--gray-700);line-height:1.8;margin-top:12px;display:none}
+    .faq-item.open .faq-a{display:block}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-icon{transition:var(--transition);font-size:1.2rem;color:var(--red)}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge" style="background:white;border:2px solid var(--gray-200)"><img src="https://sc01.alicdn.com/kf/A005029e2fcb14751a5071525a122794dZ.png" alt="德裕新 DE YU XIN PLASTICS" style="width:100%;height:100%;object-fit:contain;background:white;border-radius:8px;padding:2px"></div>
+
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link" data-page="index.html"><span class="zh">首页</span><span class="en">Home</span></a></li>
+        <li><a href="products.html" class="nav-link" data-page="products.html"><span class="zh">产品中心</span><span class="en">Products</span></a></li>
+        <li><a href="about.html" class="nav-link" data-page="about.html"><span class="zh">关于我们</span><span class="en">About Us</span></a></li>
+        <li><a href="contact.html" class="nav-link active" data-page="contact.html"><span class="zh">联系我们</span><span class="en">Contact</span></a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="zh">中文</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="#inquiry-form" class="nav-cta"><span class="zh">立即询价</span><span class="en">Get Quote</span></a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html" class="nav-link"><span class="zh">首页</span><span class="en">Home</span></a>
+  <a href="products.html" class="nav-link"><span class="zh">产品中心</span><span class="en">Products</span></a>
+  <a href="about.html" class="nav-link"><span class="zh">关于我们</span><span class="en">About Us</span></a>
+  <a href="contact.html" class="nav-link"><span class="zh">联系我们</span><span class="en">Contact</span></a>
+  <div class="lang-toggle" style="margin-top:16px"><button class="lang-btn" data-lang="zh">中文</button><button class="lang-btn" data-lang="en">EN</button></div>
+  <a href="#inquiry-form" class="btn btn-primary" style="margin-top:16px;justify-content:center"><span class="zh">立即询价</span><span class="en">Get a Quote</span></a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html"><span class="zh">首页</span><span class="en">Home</span></a>
+      <span>›</span>
+      <span><span class="zh">联系我们</span><span class="en">Contact</span></span>
+    </div>
+    <h1><span class="zh">联系我们</span><span class="en">Contact Us</span></h1>
+    <p><span class="zh">专业团队随时为您解答疑问，提供免费打样和专属报价服务</span><span class="en">Our professional team is ready to answer your questions and provide free samples and custom quotes</span></p>
+  </div>
+</section>
+
+<!-- QUICK CONTACT STRIP -->
+<section style="background:var(--gray-100);padding:40px 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" data-reveal>
+      <a href="tel:+8617512921013" style="background:white;border-radius:var(--radius);padding:24px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <div style="width:48px;height:48px;background:var(--red);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📱</div>
+        <div>
+          <div style="font-size:.78rem;color:var(--gray-500);margin-bottom:2px"><span class="zh">手机/微信</span><span class="en">Mobile/WeChat</span></div>
+          <div style="font-weight:700;color:var(--blue)">+86 175-1292-1013</div>
+        </div>
+      </a>
+      <a href="tel:+8607608658178" style="background:white;border-radius:var(--radius);padding:24px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <div style="width:48px;height:48px;background:var(--blue);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📞</div>
+        <div>
+          <div style="font-size:.78rem;color:var(--gray-500);margin-bottom:2px"><span class="zh">固定电话</span><span class="en">Office Phone</span></div>
+          <div style="font-weight:700;color:var(--blue)">0760-8658-1786</div>
+        </div>
+      </a>
+      <div style="background:white;border-radius:var(--radius);padding:24px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm)">
+        <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--red),var(--blue));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📍</div>
+        <div>
+          <div style="font-size:.78rem;color:var(--gray-500);margin-bottom:2px"><span class="zh">工厂地址</span><span class="en">Factory Address</span></div>
+          <div style="font-weight:700;color:var(--blue);font-size:.9rem"><span class="zh">中山市坦洲镇彩虹路15号</span><span class="en">No.15 Caihong Rd, Tanzhou</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Info Panel -->
+      <div data-reveal>
+        <div class="contact-info-card">
+          <h2><span class="zh">联系信息</span><span class="en">Contact Information</span></h2>
+          <div class="contact-info-item">
+            <div class="ci-icon-box">👤</div>
+            <div>
+              <div class="ci-label"><span class="zh">联系人</span><span class="en">Contact Person</span></div>
+              <div class="ci-val"><span class="zh">贺士弘 先生</span><span class="en">Mr. He Shihong</span></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon-box">📱</div>
+            <div>
+              <div class="ci-label"><span class="zh">手机 / 微信</span><span class="en">Mobile / WeChat</span></div>
+              <div class="ci-val">+86 175-1292-1013</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon-box">📞</div>
+            <div>
+              <div class="ci-label"><span class="zh">固定电话</span><span class="en">Office Phone</span></div>
+              <div class="ci-val">0760-8658-1786</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon-box">🕐</div>
+            <div>
+              <div class="ci-label"><span class="zh">工作时间</span><span class="en">Business Hours</span></div>
+              <div class="ci-val"><span class="zh">周一至周六 8:30–18:00</span><span class="en">Mon–Sat 8:30–18:00 (CST)</span></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon-box">📍</div>
+            <div>
+              <div class="ci-label"><span class="zh">工厂地址</span><span class="en">Factory Address</span></div>
+              <div class="ci-val" style="font-size:.92rem;line-height:1.6">
+                <span class="zh">广东省中山市坦洲镇彩虹路15号二楼、三楼</span>
+                <span class="en">2F & 3F, No.15 Caihong Rd, Tanzhou Town, Zhongshan, Guangdong, China</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="map-container" style="margin-top:24px">
+          <iframe
+            src="https://maps.google.com/maps?q=中山市坦洲镇彩虹路15号&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p style="text-align:center;font-size:.82rem;color:var(--gray-500);margin-top:8px">
+          <span class="zh">📌 广东省中山市坦洲镇彩虹路15号，毗邻珠海，交通便利</span>
+          <span class="en">📌 Tanzhou, Zhongshan, adjacent to Zhuhai — convenient transportation</span>
+        </p>
+      </div>
+
+      <!-- Inquiry Form -->
+      <div data-reveal data-reveal-delay="1">
+        <form class="contact-form" id="inquiry-form">
+          <h2><span class="zh">发送询价</span><span class="en">Send an Inquiry</span></h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label><span class="zh">姓名 *</span><span class="en">Full Name *</span></label>
+              <input type="text" placeholder="" required>
+            </div>
+            <div class="form-group">
+              <label><span class="zh">公司名称</span><span class="en">Company Name</span></label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label><span class="zh">联系电话 *</span><span class="en">Phone / WhatsApp *</span></label>
+              <input type="tel" required>
+            </div>
+            <div class="form-group">
+              <label><span class="zh">电子邮箱</span><span class="en">Email Address</span></label>
+              <input type="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label><span class="zh">感兴趣的产品</span><span class="en">Product(s) of Interest</span></label>
+            <select>
+              <option value=""><span class="zh">-- 请选择 --</span><span class="en">-- Please select --</span></option>
+              <option value="trays"><span class="zh">吸塑托盘</span><span class="en">Blister Trays</span></option>
+              <option value="boxes"><span class="zh">透明包装盒</span><span class="en">Clear Packaging Boxes</span></option>
+              <option value="sheet"><span class="zh">PET 片材 / 卷材</span><span class="en">PET Sheet / Roll</span></option>
+              <option value="toys"><span class="zh">玩具吸塑包装</span><span class="en">Toy Blister Packaging</span></option>
+              <option value="custom"><span class="zh">定制开发</span><span class="en">Custom Development</span></option>
+              <option value="other"><span class="zh">其他</span><span class="en">Other</span></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><span class="zh">采购数量（参考）</span><span class="en">Estimated Quantity</span></label>
+            <select>
+              <option value=""><span class="zh">-- 请选择 --</span><span class="en">-- Please select --</span></option>
+              <option><span class="zh">100 ~ 500 件</span><span class="en">100 – 500 pcs</span></option>
+              <option><span class="zh">500 ~ 2000 件</span><span class="en">500 – 2,000 pcs</span></option>
+              <option><span class="zh">2000 ~ 10000 件</span><span class="en">2,000 – 10,000 pcs</span></option>
+              <option><span class="zh">10000 件以上</span><span class="en">10,000+ pcs</span></option>
+              <option><span class="zh">待定</span><span class="en">To be determined</span></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><span class="zh">需求描述 *</span><span class="en">Requirements / Message *</span></label>
+            <textarea placeholder="" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" style="width:100%;justify-content:center;border-radius:10px">
+            <span class="zh">📨 提交询价</span><span class="en">📨 Submit Inquiry</span>
+          </button>
+          <p style="text-align:center;font-size:.82rem;color:var(--gray-500);margin-top:12px">
+            <span class="zh">我们通常在1个工作日内回复，支持免费打样</span>
+            <span class="en">We typically reply within 1 business day — free samples available</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--gray-100)">
+  <div class="container">
+    <div class="section-title" data-reveal>
+      <h2><span class="zh">常见问题</span><span class="en">Frequently Asked Questions</span></h2>
+      <p class="subtitle"><span class="zh">您最关心的问题，我们都帮您想到了</span><span class="en">Answers to your most common questions</span></p>
+      <div class="line"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">
+          <span class="zh">是否支持定制？最小起订量是多少？</span>
+          <span class="en">Do you offer custom orders? What's the MOQ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="zh">支持完全定制，可按客户提供的图纸或样品开发。最小起订量根据产品复杂度和材质不同而有所差异，一般常规产品500件起订，欢迎联系我们获取详细信息。</span>
+          <span class="en">We offer full customization based on your drawings or samples. MOQ varies by product complexity and material — typically 500 pcs for standard products. Contact us for details.</span>
+        </div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">
+          <span class="zh">可以提供免费样品吗？</span>
+          <span class="en">Can I get free samples?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="zh">是的，我们支持免费打样和免费设计。打样费一般在批量采购时可以抵扣。请联系我们提供您的产品需求，我们的工程师会尽快为您设计方案。</span>
+          <span class="en">Yes! We provide free sampling and free design. Tooling costs are typically deductible on bulk orders. Share your requirements and our engineers will prepare a design promptly.</span>
+        </div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">
+          <span class="zh">产品符合哪些环保标准？</span>
+          <span class="en">What environmental standards do your products comply with?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="zh">我们的产品符合欧盟RoHS/REACH指令、美国FDA标准、日本食品卫生法及韩国相关包装法规要求，同时通过ISO 9001质量管理体系认证。</span>
+          <span class="en">Our products comply with EU RoHS/REACH directives, US FDA standards, Japan's Food Sanitation Law, and Korean packaging regulations. We are also ISO 9001 certified.</span>
+        </div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">
+          <span class="zh">交货周期一般是多少天？</span>
+          <span class="en">What is the typical lead time?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="zh">常规产品（无需开模）一般7~15个工作日；需要开模定制的产品，开模周期约10~15天，后续生产7~15天。具体以订单确认时为准。</span>
+          <span class="en">Standard products (no new tooling needed): 7–15 business days. Custom tooling products: 10–15 days for tooling + 7–15 days production. Confirmed on order acknowledgment.</span>
+        </div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <div class="faq-q">
+          <span class="zh">可以出口到海外吗？支持哪些付款方式？</span>
+          <span class="en">Can you export internationally? What payment methods do you accept?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="zh">可以，我们有丰富的出口经验，产品出口至欧美、东南亚、日韩等地区。付款方式支持T/T（电汇）、L/C（信用证）、PayPal等，具体可协商。</span>
+          <span class="en">Yes! We have extensive export experience, shipping to Europe, Americas, Southeast Asia, Japan, and Korea. Payment: T/T, L/C, PayPal, and others — negotiable.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-badge" style="background:white;border:2px solid var(--gray-200)"><img src="https://sc01.alicdn.com/kf/A005029e2fcb14751a5071525a122794dZ.png" alt="德裕新 DE YU XIN PLASTICS" style="width:100%;height:100%;object-fit:contain;background:white;border-radius:8px;padding:2px"></div>
+        <div class="brand-name"><span class="zh">德裕新塑胶制品有限公司</span><span class="en">Deyuxin Plastics Co., Ltd.</span></div>
+        <div class="brand-sub">ZHONGSHAN DEYUXIN PLASTICS CO., LTD.</div>
+        <p><span class="zh">深耕吸塑行业15年，致力于为全球客户提供高品质塑胶包装解决方案。</span><span class="en">15 years of blister packaging expertise for clients worldwide.</span></p>
+      </div>
+      <div>
+        <h4><span class="zh">快速导航</span><span class="en">Quick Links</span></h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><span class="zh">首页</span><span class="en">Home</span></a></li>
+          <li><a href="products.html"><span class="zh">产品中心</span><span class="en">Products</span></a></li>
+          <li><a href="about.html"><span class="zh">关于我们</span><span class="en">About Us</span></a></li>
+          <li><a href="contact.html"><span class="zh">联系我们</span><span class="en">Contact</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="zh">产品系列</span><span class="en">Products</span></h4>
+        <ul class="footer-links">
+          <li><a href="products.html#trays"><span class="zh">吸塑托盘</span><span class="en">Blister Trays</span></a></li>
+          <li><a href="products.html#boxes"><span class="zh">透明包装盒</span><span class="en">Clear Boxes</span></a></li>
+          <li><a href="products.html#sheet"><span class="zh">PET 片材</span><span class="en">PET Sheet</span></a></li>
+          <li><a href="products.html#toys"><span class="zh">玩具包装</span><span class="en">Toy Packaging</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="zh">联系我们</span><span class="en">Contact Us</span></h4>
+        <div class="footer-contact-item"><span class="ci-icon">📍</span><span><span class="zh">广东省中山市坦洲镇彩虹路15号</span><span class="en">No.15 Caihong Rd, Tanzhou, Zhongshan, GD</span></span></div>
+        <div class="footer-contact-item"><span class="ci-icon">📞</span><span>+86 0760-8658-1786</span></div>
+        <div class="footer-contact-item"><span class="ci-icon">📱</span><span>+86 175-1292-1013</span></div>
+        <div class="footer-contact-item"><span class="ci-icon">👤</span><span><span class="zh">联系人：贺士弘</span><span class="en">Contact: Mr. He Shihong</span></span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <span class="zh">中山市德裕新塑胶制品有限公司</span><span class="en">Zhongshan Deyuxin Plastics Co., Ltd.</span></span>
+      <span>Guangdong, China</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
