@@ -180,54 +180,59 @@
 
       <!-- Inquiry Form -->
       <div data-reveal data-reveal-delay="1">
-        <form class="contact-form" id="inquiry-form">
+        <form class="contact-form" id="inquiry-form" action="https://formspree.io/f/aster222@126.com" method="POST">
+          <!-- Formspree hidden fields -->
+          <input type="hidden" name="_subject" value="【德裕新官网】新询价信息">
+          <input type="hidden" name="_language" value="zh">
+          <input type="text" name="_gotcha" style="display:none">
+
           <h2><span class="zh">发送询价</span><span class="en">Send an Inquiry</span></h2>
           <div class="form-row">
             <div class="form-group">
               <label><span class="zh">姓名 *</span><span class="en">Full Name *</span></label>
-              <input type="text" placeholder="" required>
+              <input type="text" name="name" placeholder="" required>
             </div>
             <div class="form-group">
               <label><span class="zh">公司名称</span><span class="en">Company Name</span></label>
-              <input type="text">
+              <input type="text" name="company">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label><span class="zh">联系电话 *</span><span class="en">Phone / WhatsApp *</span></label>
-              <input type="tel" required>
+              <input type="tel" name="phone" required>
             </div>
             <div class="form-group">
               <label><span class="zh">电子邮箱</span><span class="en">Email Address</span></label>
-              <input type="email">
+              <input type="email" name="email">
             </div>
           </div>
           <div class="form-group">
             <label><span class="zh">感兴趣的产品</span><span class="en">Product(s) of Interest</span></label>
-            <select>
-              <option value=""><span class="zh">-- 请选择 --</span><span class="en">-- Please select --</span></option>
-              <option value="trays"><span class="zh">吸塑托盘</span><span class="en">Blister Trays</span></option>
-              <option value="boxes"><span class="zh">透明包装盒</span><span class="en">Clear Packaging Boxes</span></option>
-              <option value="sheet"><span class="zh">PET 片材 / 卷材</span><span class="en">PET Sheet / Roll</span></option>
-              <option value="toys"><span class="zh">玩具吸塑包装</span><span class="en">Toy Blister Packaging</span></option>
-              <option value="custom"><span class="zh">定制开发</span><span class="en">Custom Development</span></option>
-              <option value="other"><span class="zh">其他</span><span class="en">Other</span></option>
+            <select name="product">
+              <option value="">-- 请选择 / Please select --</option>
+              <option value="吸塑托盘 Blister Trays">吸塑托盘 / Blister Trays</option>
+              <option value="产品内包装 Inner Packaging">产品内包装 / Inner Packaging</option>
+              <option value="透明包装盒 Clear Boxes">透明包装盒 / Clear Boxes</option>
+              <option value="PET片材 PET Sheet">PET 片材 / PET Sheet</option>
+              <option value="定制开发 Custom">定制开发 / Custom Development</option>
+              <option value="其他 Other">其他 / Other</option>
             </select>
           </div>
           <div class="form-group">
             <label><span class="zh">采购数量（参考）</span><span class="en">Estimated Quantity</span></label>
-            <select>
-              <option value=""><span class="zh">-- 请选择 --</span><span class="en">-- Please select --</span></option>
-              <option><span class="zh">100 ~ 500 件</span><span class="en">100 – 500 pcs</span></option>
-              <option><span class="zh">500 ~ 2000 件</span><span class="en">500 – 2,000 pcs</span></option>
-              <option><span class="zh">2000 ~ 10000 件</span><span class="en">2,000 – 10,000 pcs</span></option>
-              <option><span class="zh">10000 件以上</span><span class="en">10,000+ pcs</span></option>
-              <option><span class="zh">待定</span><span class="en">To be determined</span></option>
+            <select name="quantity">
+              <option value="">-- 请选择 / Please select --</option>
+              <option value="100-500pcs">100 ~ 500 件 / pcs</option>
+              <option value="500-2000pcs">500 ~ 2000 件 / pcs</option>
+              <option value="2000-10000pcs">2000 ~ 10000 件 / pcs</option>
+              <option value="10000pcs+">10000 件以上 / 10,000+ pcs</option>
+              <option value="待定 TBD">待定 / To be determined</option>
             </select>
           </div>
           <div class="form-group">
             <label><span class="zh">需求描述 *</span><span class="en">Requirements / Message *</span></label>
-            <textarea placeholder="" required></textarea>
+            <textarea name="message" placeholder="" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary form-submit" style="width:100%;justify-content:center;border-radius:10px">
             <span class="zh">📨 提交询价</span><span class="en">📨 Submit Inquiry</span>
