@@ -754,7 +754,7 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
 .advantages { background: var(--gray-100); }
 .adv-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 .adv-card {
@@ -1379,6 +1379,7 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
    ============================================= */
 @media (max-width: 1024px) {
   .adv-grid { grid-template-columns: repeat(2, 1fr); }
+  /* keep 2-col on tablet */
   .prod-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .prod-full-grid { grid-template-columns: repeat(2, 1fr); }
