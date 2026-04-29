@@ -1538,6 +1538,52 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   .gallery-grid { grid-template-columns: 1fr; gap: 24px; }
   .gallery-item { aspect-ratio: auto; }
   .gallery-item img { height: auto; }
+
+  /* 主营产品：手机端统一改为一排一个横向长方形 (中英文同步) */
+  .prod-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .prod-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .prod-img {
+    aspect-ratio: 16 / 9 !important;
+    width: 100%;
+    height: auto;
+  }
+  .prod-body {
+    padding: 20px;
+    text-align: left;
+  }
+  .prod-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  .prod-body p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* 优势介绍：小字缩小，防止显得拥挤 */
+  .adv-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+  .adv-card {
+    padding: 20px 10px;
+  }
+  .adv-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+  .adv-card p {
+    font-size: 0.72rem;
+    line-height: 1.4;
+    opacity: 0.8;
+  }
 }
 
 /* Final override for mobile Chinese mode: Only hide text spans, NOT structural containers */
