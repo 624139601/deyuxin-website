@@ -147,6 +147,124 @@ body .lang-toggle { display: flex; }
 
 /* Hero badge: zh one line, en next line */
 .hero-badge { flex-direction: column; gap: 2px; text-align: center; }
+
+/* ---------- Mobile: Only show Chinese in Chinese mode (hide English) ---------- */
+@media (max-width: 768px) {
+  /* Hide all English text when in Chinese mode */
+  body:not(.lang-en) span.en,
+  body:not(.lang-en) p.en,
+  body:not(.lang-en) div.en-text,
+  body:not(.lang-en) .hero-badge span.en {
+    display: none !important;
+  }
+  
+  /* Reset layout for items that were column/flex to center zh only */
+  body:not(.lang-en) .hero-badge {
+    flex-direction: row !important;
+    justify-content: center;
+    text-align: center;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    gap: 4px;
+    width: fit-content;
+    margin: 0 auto 15px;
+  }
+
+  body:not(.lang-en) .hero-stats {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 0;
+    margin-top: 30px;
+    width: 100%;
+    padding: 0;
+  }
+
+  body:not(.lang-en) .hero-stat {
+    flex: 1;
+    text-align: center;
+  }
+
+  body:not(.lang-en) .hero-stat .num {
+    font-size: 1.6rem !important; /* 进一步调大数字 */
+    font-weight: 700;
+  }
+
+  body:not(.lang-en) .hero-stat .label {
+    font-size: 0.9rem !important; /* 调大下方文字 */
+    white-space: nowrap;
+    color: var(--gray-600);
+    margin-top: 4px;
+  }
+
+  /* 2. 主营产品：从一排两个改成一排一个横向的长方形 (上图下文) */
+  body:not(.lang-en) .prod-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+
+  body:not(.lang-en) .prod-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  body:not(.lang-en) .prod-img {
+    aspect-ratio: 16 / 9 !important; /* 标准宽屏长方形比例 */
+    width: 100%;
+    height: auto;
+  }
+
+  body:not(.lang-en) .prod-body {
+    padding: 20px;
+    text-align: left;
+  }
+
+  body:not(.lang-en) .prod-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  body:not(.lang-en) .prod-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  body:not(.lang-en) .adv-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+
+  body:not(.lang-en) .adv-card {
+    padding: 20px 10px;
+  }
+
+  body:not(.lang-en) .adv-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  body:not(.lang-en) .adv-card p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  body:not(.lang-en) .hero h1 {
+    font-size: 1.7rem !important;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  body:not(.lang-en) .hero p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  body:not(.lang-en) .section-title h2 {
+    font-size: 1.6rem;
+  }
+}
 .hero-badge span.zh { display: block; font-size: 0.88rem; opacity: 1; margin: 0; line-height: 1.4; }
 .hero-badge span.en { display: block; font-size: 0.78rem; opacity: 0.75; margin: 0; font-family: var(--font-en); font-weight: 400; line-height: 1.3; }
 
@@ -943,7 +1061,7 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   aspect-ratio: 4/3;
   background: var(--gray-200);
   position: relative;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 .gallery-item img {
   width: 100%; height: 100%;
@@ -1392,7 +1510,16 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   .hero-grid { grid-template-columns: 1fr; padding: 60px 0; }
   .hero-visual { display: none; }
   .hero h1 { font-size: 2.2rem; }
-  .hero-stats { grid-template-columns: repeat(3, 1fr); }
+  .hero-stats { 
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+    margin-top: 64px; 
+    padding-top: 64px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .hero-stat .num { font-size: 4rem; }
+  .hero-stat .label { font-size: 1.25rem; font-weight: 600; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .about-strip-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -1407,5 +1534,16 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   .timeline-item:nth-child(even) .tl-content { grid-column: 2; text-align: left; }
   .timeline-item .tl-empty { display: none; }
   .tl-dot { grid-column: 1; }
-  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 24px; }
+  .gallery-item { aspect-ratio: auto; }
+  .gallery-item img { height: auto; }
+}
+
+/* Final override for mobile Chinese mode: Only hide text spans, NOT structural containers */
+@media (max-width: 768px) {
+  body:not(.lang-en) span.en,
+  body:not(.lang-en) p.en,
+  body:not(.lang-en) div.en-text {
+    display: none !important;
+  }
 }

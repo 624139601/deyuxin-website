@@ -145,3 +145,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+/* ---------- GLightbox ---------- */
+if (typeof GLightbox !== 'undefined') {
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
+}
