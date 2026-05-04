@@ -104,14 +104,29 @@ if (contactForm) {
     const originalHTML = btn.innerHTML;
     btn.innerHTML = '<span class="zh">发送中...</span><span class="en">Sending...</span>';
     btn.disabled = true;
-    setTimeout(() => {
-      btn.innerHTML = '<span class="zh">✓ 发送成功！我们将尽快回复您</span><span class="en">✓ Sent! We\'ll reply soon.</span>';
-      btn.style.background = '#16a34a';
-      // Re-apply lang state
-      document.body.classList.contains('lang-en')
-        ? (btn.querySelector('.zh').style.display = 'none')
-        : (btn.querySelector('.en').style.display = 'none');
-    }, 1500);
+
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        btn.innerHTML = '<span class="zh">✓ 发送成功！我们将尽快回复您</span><span class="en">✓ Sent! We\'ll reply soon.</span>';
+        btn.style.background = '#16a34a';
+        contactForm.reset();
+      } else {
+        btn.innerHTML = '<span class="zh">❌ 发送失败，请稍后重试</span><span class="en">❌ Error, please try again</span>';
+        btn.style.background = '#dc2626';
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.disabled = false;
+          btn.style.background = '';
+        }, 3000);
+      }
+    }).catch(error => {
+      btn.innerHTML = '<span class="zh">❌ 网络错误</span><span class="en">❌ Network Error</span>';
+      btn.style.background = '#dc2626';
+    });
   });
 }
 
