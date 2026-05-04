@@ -1540,21 +1540,22 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   .gallery-item img { height: auto; }
 
   /* 主营产品：手机端统一改为一排一个横向长方形 (中英文同步) */
-  .prod-grid {
+  .prod-grid, .prod-full-grid {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
   }
-  .prod-card {
+  .prod-card, .prod-full-card {
     display: flex;
     flex-direction: column;
     height: auto;
   }
-  .prod-img {
+  .prod-img, .prod-full-img {
     aspect-ratio: 16 / 9 !important;
     width: 100%;
     height: auto;
   }
-  .prod-body {
+  .prod-full-img img { height: 100%; object-fit: cover; }
+  .prod-body, .prod-full-body {
     padding: 20px;
     text-align: left;
   }
