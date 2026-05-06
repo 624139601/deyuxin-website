@@ -1029,16 +1029,16 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
 .cert-grid {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 24px;
 }
 .cert-item {
+  flex: 1;
+  max-width: 280px;
   background: white;
   border-radius: var(--radius);
-  padding: 28px 36px;
+  padding: 28px 20px;
   text-align: center;
   box-shadow: var(--shadow-sm);
-  min-width: 200px;
   transition: var(--transition);
 }
 .cert-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
@@ -1529,6 +1529,8 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .cert-grid { flex-wrap: wrap; gap: 16px; }
+  .cert-item { flex: 0 0 calc(50% - 8px); max-width: none; padding: 20px 10px; }
   .timeline::before { left: 16px; }
   .timeline-item { grid-template-columns: auto 1fr; }
   .timeline-item:nth-child(odd) .tl-content,
