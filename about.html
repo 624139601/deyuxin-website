@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=16.0">
+  <link rel="stylesheet" href="css/style.css?v=22.0">
   <link rel="icon" type="image/png" href="https://sc02.alicdn.com/kf/A30ca6d6edf42452d92a69e5c50462813z.png">
   <style>
     [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
@@ -20,7 +20,15 @@
     .value-icon{font-size:2.4rem;margin-bottom:16px}
     .value-card h3{color:var(--blue);margin-bottom:10px}
     .value-card p{font-size:.88rem;color:var(--gray-500);line-height:1.7}
-    @media(max-width:768px){.values-grid{grid-template-columns:1fr}}
+    
+    .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    
+    @media(max-width:768px){
+      .values-grid{grid-template-columns:1fr; gap:16px}
+      .value-card{padding:24px}
+      .metrics-grid{grid-template-columns:repeat(2,1fr); gap:16px}
+      .about-strip{padding:40px 0 !important}
+    }
   </style>
   <!-- GLightbox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
@@ -120,7 +128,7 @@
       <h2 style="color:white"><span class="zh">公司实力</span><span class="en">Company Strengths</span></h2>
       <div class="line"></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px" data-reveal>
+    <div class="metrics-grid" data-reveal>
       <div class="metric-card">
         <div class="val"><span data-counter="2012" data-suffix="">2012</span></div>
         <div class="lbl"><span class="zh">年成立</span><span class="en">Year Founded</span></div>
