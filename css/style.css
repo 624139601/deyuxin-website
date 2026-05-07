@@ -1545,8 +1545,19 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   .hamburger { display: flex; }
   .about-strip-inner { grid-template-columns: 1fr; gap: 40px; }
   .about-metrics { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-info-card, .contact-form { padding: 24px 20px; }
+  .contact-info-card h2, .contact-form h2 { font-size: 1.35rem; margin-bottom: 24px; }
+  .contact-info-item { gap: 12px; margin-bottom: 20px; }
+  .contact-info-item .ci-icon-box { width: 36px; height: 36px; font-size: 1rem; border-radius: 8px; }
+  .contact-info-item .ci-val { font-size: 0.95rem; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .form-group label { font-size: 0.82rem; }
+  .form-group input, .form-group select, .form-group textarea { padding: 10px 14px; font-size: 0.9rem; }
+  .map-container { height: 260px; margin-top: 20px; }
+  .faq-item { padding: 16px 20px; }
+  .faq-q { font-size: 0.92rem; }
+  .faq-a { font-size: 0.85rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .cert-grid { flex-wrap: wrap; gap: 16px; }
