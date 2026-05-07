@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://624139601.github.io/deyuxin-website/sitemap.xml

@@ -1,0 +1,108 @@
+{
+  "version": 2,
+  "jobs": [
+    {
+      "id": "cron-1778049332056-gh9zh54r",
+      "name": "Daily Self-Improvement Reflection",
+      "description": "每天凌晨4点自动复盘过去24小时的会话并执行自我提升流程。",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1778049332056,
+      "updatedAtMs": 1778124232118,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agent",
+        "message": "现在是凌晨4点，执行每日自我提升复盘任务。\n\n步骤：\n1. 调用 sessions_list(active_minutes=1440) 获取过去24小时内的所有会话 ID。\n2. 对每个会话（特别是包含实质性内容的），调用 sessions_history(session_key=..., include_tools=true) 获取记录。\n3. 仔细阅读 /Users/heyaoyao/.accio/accounts/1750313170/agents/DID-F456DA-78F456DAU1776250-4126-83FC6D/agent-core/skills/self-improvement/SKILL.md 遵循其工作流。\n4. 识别并记录：\n   - [LRN]：用户纠正、偏好、知识盲区。\n   - [ERR]：工具或操作错误。\n   - [FEAT]：用户提出的功能需求。\n   - [REF]：完成的重大任务反思。\n5. 将这些条目写入 /Users/heyaoyao/.accio/accounts/1750313170/agents/DID-F456DA-78F456DAU1776250-4126-83FC6D/agent-core/diary/ 目录下对应的日期文件。\n6. 如果发现符合晋升规则（如：用户明确偏好、重复出现3次的纠正等），按 SKILL.md 指引更新 SOUL.md, MEMORY.md, AGENTS.md 或 TOOLS.md。\n7. 在今日 diary 中增加一条 [REF] 记录本次复盘的完成情况。\n\n注意：复盘应客观、详尽，重点在于如何避免未来的错误和提升服务质量。",
+        "agent": "general"
+      },
+      "state": {
+        "nextRunAtMs": 1778184000000,
+        "lastRunAtMs": 1778124230166,
+        "lastStatus": "ok",
+        "lastDurationMs": 30
+      },
+      "target": {
+        "type": "conversation",
+        "conversationId": "CID-05313170U1778049-03ADA0-3150-19514C"
+      },
+      "workspacePath": "/Users/heyaoyao/.accio/accounts/1750313170/agents/DID-F456DA-78F456DAU1776250-4126-83FC6D/project",
+      "createdBy": {
+        "source": "agent",
+        "actorId": "DID-F456DA-78F456DAU1776250-4126-83FC6D"
+      }
+    },
+    {
+      "id": "cron-1778050054645-795307pv",
+      "name": "每日复盘与计划提醒",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1778050054645,
+      "updatedAtMs": 1778124232122,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "tool",
+        "tool": "question",
+        "args": {
+          "message": "瑶瑶，现在是复盘时间：\n1. 今天完成了哪些具体动作？\n2. 遇到了什么卡壳的地方？\n3. 明天最重要的一件事是什么？\n请和我聊聊，我帮你记录并调整计划。"
+        }
+      },
+      "state": {
+        "nextRunAtMs": 1778158800000,
+        "lastRunAtMs": 1778124230131,
+        "lastStatus": "ok",
+        "lastDurationMs": 6
+      },
+      "target": {
+        "type": "conversation",
+        "conversationId": "CID-71313170U1778049-03ADA0-5290-40F972"
+      },
+      "workspacePath": "/Users/heyaoyao/.accio/accounts/1750313170/agents/DID-F456DA-78F456DAU1776250-4126-83FC6D/project",
+      "createdBy": {
+        "source": "agent",
+        "actorId": "DID-F456DA-78F456DAU1776250-4126-83FC6D"
+      }
+    },
+    {
+      "id": "cron-1778050384952-0fj7162p",
+      "name": "Daily Session Reflection & Self-Improvement",
+      "description": "每天凌晨4点复盘会话并进行自我提升。",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1778050384952,
+      "updatedAtMs": 1778124232126,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agent",
+        "message": "现在是凌晨4点。请复盘今天所有的会话，使用 self-improvement skill 总结经验教训，并记录在 diary 中以持续提升团队运营水平。",
+        "agent": "main"
+      },
+      "state": {
+        "nextRunAtMs": 1778184000000,
+        "lastRunAtMs": 1778124230170,
+        "lastStatus": "ok",
+        "lastDurationMs": 25
+      },
+      "target": {
+        "type": "conversation",
+        "conversationId": "CID-11313170U1778050-03ADA0-1419-9339F3"
+      },
+      "workspacePath": "/Users/heyaoyao/.accio/accounts/1750313170/agents/DID-F456DA-78F456DAU1776250-4126-83FC6D/project",
+      "createdBy": {
+        "source": "agent",
+        "actorId": "DID-F456DA-78F456DAU1776250-4126-83FC6D"
+      }
+    }
+  ]
+}
