@@ -8,12 +8,54 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=23.0">
+  <link rel="stylesheet" href="css/style.css?v=24.0">
   <link rel="icon" type="image/png" href="https://sc02.alicdn.com/kf/A30ca6d6edf42452d92a69e5c50462813z.png">
   <style>
     [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
     [data-reveal].revealed{opacity:1;transform:none}
     [data-reveal-delay="1"]{transition-delay:.1s}[data-reveal-delay="2"]{transition-delay:.2s}
+    .quick-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .quick-contact-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .quick-contact-card:hover { transform: translateY(-4px); }
+    .qc-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .quick-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .quick-contact-card {
+        padding: 16px 20px;
+        gap: 12px;
+      }
+      .qc-icon-box {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+    }
     .map-container{
       border-radius:var(--radius-lg);
       overflow:hidden;
@@ -90,23 +132,23 @@
 <!-- QUICK CONTACT STRIP -->
 <section style="background:var(--gray-100);padding:40px 0">
   <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" data-reveal>
-      <a href="tel:+8613536544923" style="background:white;border-radius:var(--radius);padding:24px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
-        <div style="width:48px;height:48px;background:var(--red);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📱</div>
+    <div class="quick-contact-grid" data-reveal>
+      <a href="tel:+8613536544923" class="quick-contact-card">
+        <div class="qc-icon-box" style="background:var(--red)">📱</div>
         <div>
           <div style="font-size:.78rem;color:var(--gray-500);margin-bottom:2px"><span class="zh">手机/微信</span><span class="en">Mobile/WeChat</span></div>
           <div style="font-weight:700;color:var(--blue)">+86 135-3654-4923</div>
         </div>
       </a>
-      <a href="tel:+8607608658178" style="background:white;border-radius:var(--radius);padding:24px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
-        <div style="width:48px;height:48px;background:var(--blue);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📞</div>
+      <a href="tel:+8607608658178" class="quick-contact-card">
+        <div class="qc-icon-box" style="background:var(--blue)">📞</div>
         <div>
           <div style="font-size:.78rem;color:var(--gray-500);margin-bottom:2px"><span class="zh">固定电话</span><span class="en">Office Phone</span></div>
           <div style="font-weight:700;color:var(--blue)">0760-8658-1786</div>
         </div>
       </a>
-      <div style="background:white;border-radius:var(--radius);padding:24px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm)">
-        <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--red),var(--blue));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📍</div>
+      <div class="quick-contact-card">
+        <div class="qc-icon-box" style="background:linear-gradient(135deg,var(--red),var(--blue))">📍</div>
         <div>
           <div style="font-size:.78rem;color:var(--gray-500);margin-bottom:2px"><span class="zh">工厂地址</span><span class="en">Factory Address</span></div>
           <div style="font-weight:700;color:var(--blue);font-size:.9rem"><span class="zh">中山市坦洲镇彩虹路15号</span><span class="en">No.15 Caihong Rd, Tanzhou</span></div>

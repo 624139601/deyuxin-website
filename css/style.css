@@ -1523,7 +1523,9 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
 }
 
 @media (max-width: 768px) {
-  .section { padding: 64px 0; }
+  .section { padding: 40px 0; }
+  .section-title { margin-bottom: 32px; }
+  .section-title h2 { font-size: 1.75rem; }
   .hero-grid { grid-template-columns: 1fr; padding: 60px 0; }
   .hero-visual { display: none; }
   .hero h1 { font-size: 2.2rem; }
