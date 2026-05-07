@@ -1513,8 +1513,8 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
   .hero-stats { 
     grid-template-columns: 1fr; 
     gap: 64px; 
-    margin-top: 160px; 
-    padding-top: 160px;
+    margin-top: 190px; 
+    padding-top: 180px;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.15);
   }
