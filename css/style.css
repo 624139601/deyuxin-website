@@ -172,29 +172,32 @@ body .lang-toggle { display: flex; }
 
   body:not(.lang-en) .hero-stats {
     display: flex !important;
-    flex-direction: column !important;
-    gap: 64px !important;
-    margin-top: 240px !important;
-    padding-top: 200px !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    margin-top: 65px !important; /* 原本30px，增加约35px(5mm) */
     width: 100%;
-    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 0;
+    border-top: none; /* 恢复原来的无边框样式 */
   }
 
   body:not(.lang-en) .hero-stat {
+    flex: 1;
     text-align: center;
   }
 
   body:not(.lang-en) .hero-stat .num {
-    font-size: 4.2rem !important;
-    line-height: 1;
+    font-size: 1.8rem !important; /* 保持精美的小尺寸 */
     font-weight: 700;
+    line-height: 1.1;
   }
 
   body:not(.lang-en) .hero-stat .label {
-    font-size: 1.3rem !important;
-    color: var(--white);
-    margin-top: 8px;
-    font-weight: 600;
+    font-size: 0.85rem !important; 
+    white-space: nowrap;
+    color: var(--gray-400);
+    margin-top: 4px;
+    font-weight: normal;
   }
 
   /* 2. 主营产品：从一排两个改成一排一个横向的长方形 (上图下文) */
