@@ -95,6 +95,41 @@ if (counterEls.length > 0) {
   counterEls.forEach(el => counterObs.observe(el));
 }
 
+/* ---------- Back to Top ---------- */
+const backToTop = document.createElement('a');
+backToTop.href = '#';
+backToTop.className = 'back-to-top';
+backToTop.innerHTML = '↑';
+document.body.appendChild(backToTop);
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+backToTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ---------- Mobile Sticky Bar ---------- */
+const stickyBar = document.createElement('div');
+stickyBar.className = 'mobile-sticky-bar';
+stickyBar.innerHTML = `
+  <a href="tel:+8613536544923" class="sticky-btn sticky-call">
+    <span class="zh">📞 电话咨询</span>
+    <span class="en">Call Us</span>
+  </a>
+  <a href="contact.html#inquiry-form" class="sticky-btn sticky-inquiry">
+    <span class="zh">✉️ 立即询价</span>
+    <span class="en">Inquiry</span>
+  </a>
+`;
+document.body.appendChild(stickyBar);
+
 /* ---------- Contact Form ---------- */
 const contactForm = document.querySelector('#inquiry-form');
 if (contactForm) {
