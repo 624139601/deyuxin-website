@@ -746,7 +746,7 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
 }
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 56px;
   padding-top: 40px;
