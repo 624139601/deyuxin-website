@@ -119,7 +119,7 @@ backToTop.addEventListener('click', (e) => {
 const stickyBar = document.createElement('div');
 stickyBar.className = 'mobile-sticky-bar';
 stickyBar.innerHTML = `
-  <a href="tel:+8613536544923" class="sticky-btn sticky-call">
+  <a href="tel:+8613923306595" class="sticky-btn sticky-call">
     <span class="zh">📞 电话咨询</span>
     <span class="en">Call Us</span>
   </a>
