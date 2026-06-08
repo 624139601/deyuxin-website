@@ -103,6 +103,37 @@
         "source": "agent",
         "actorId": "DID-F456DA-78F456DAU1776250-4126-83FC6D"
       }
+    },
+    {
+      "id": "cron-1780915510999-fxj7vj3w",
+      "name": "Deyuxin Website Weekly Check",
+      "description": "Weekly automated website check for deyuxinblister.com. Runs every Monday at 10 AM.",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1780915510999,
+      "updatedAtMs": 1780915510999,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * 1",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agent",
+        "message": "Perform a comprehensive website health check for https://deyuxinblister.com and https://www.deyuxinblister.com. Verify HTTP status, SSL certificate validity, and responsiveness. Save the result to a weekly website health log under agent-core/diary/ and notify the user if there are any issues.",
+        "agent": "general"
+      },
+      "state": {
+        "nextRunAtMs": 1781488800000
+      },
+      "target": {
+        "type": "conversation",
+        "conversationId": "CID-37313170U1776250-03ADA0-7452-E15675"
+      },
+      "workspacePath": "/Users/heyaoyao/.accio/accounts/1750313170/agents/DID-F456DA-78F456DAU1776250-4126-83FC6D/project",
+      "createdBy": {
+        "source": "agent",
+        "actorId": "DID-F456DA-78F456DAU1776250-4126-83FC6D"
+      }
     }
   ]
 }
