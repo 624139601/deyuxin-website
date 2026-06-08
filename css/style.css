@@ -1540,7 +1540,7 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
     width: 100%;
   }
   .hero-stat { flex: 1; }
-  .hero-stat .num { font-size: 1.8rem; line-height: 1.1; font-weight: 700; }
+  .hero-stat .num { font-size: 1.35rem; line-height: 1.1; font-weight: 700; white-space: nowrap; }
   .hero-stat .label { font-size: 0.85rem; font-weight: 400; color: var(--gray-400); margin-top: 4px; white-space: nowrap; }
   .hero-stat .label .en { font-size: 0.75rem; opacity: 0.6; margin-top: 2px; display: block; }
   .nav-links, .nav-cta { display: none; }
