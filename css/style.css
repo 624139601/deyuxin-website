@@ -1664,7 +1664,44 @@ body.lang-en .hero-company-watermark .hcw-en { color: rgba(255,255,255,0.4); fon
 }
 
 .sticky-call { background: var(--blue); color: white; }
-.sticky-inquiry { background: var(--red); color: white; }
+.sticky-whatsapp { background: #25D366; color: white; }
+
+/* Floating WhatsApp Button (Desktop & Global) */
+.floating-contact {
+  position: fixed;
+  right: 24px;
+  bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 900;
+}
+
+.float-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.6rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.float-whatsapp { background: #25D366; }
+.float-phone { background: var(--blue); }
+
+@media (max-width: 768px) {
+  .floating-contact { display: none; } /* Mobile uses sticky bar instead */
+}
 
 /* Back to Top Button */
 .back-to-top {

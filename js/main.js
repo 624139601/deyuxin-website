@@ -123,14 +123,16 @@ stickyBar.innerHTML = `
     <span class="zh">📞 电话咨询</span>
     <span class="en">Call Us</span>
   </a>
-  <a href="contact.html#inquiry-form" class="sticky-btn sticky-inquiry">
-    <span class="zh">✉️ 立即询价</span>
-    <span class="en">Inquiry</span>
+  <a href="https://wa.me/8613923306595" class="sticky-btn sticky-whatsapp" target="_blank">
+    <span class="zh">💬 WhatsApp</span>
+    <span class="en">WhatsApp</span>
   </a>
 `;
 document.body.appendChild(stickyBar);
 
 /* ---------- Contact Form ---------- */
+// 暂时禁用 AJAX 提交，改用 FormSubmit 标准跳转模式以触发激活邮件
+/*
 const contactForm = document.querySelector('#inquiry-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -164,6 +166,7 @@ if (contactForm) {
     });
   });
 }
+*/
 
 /* ---------- Product Category Filter ---------- */
 const catTabs = document.querySelectorAll('.cat-tab');
