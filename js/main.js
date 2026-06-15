@@ -131,8 +131,6 @@ stickyBar.innerHTML = `
 document.body.appendChild(stickyBar);
 
 /* ---------- Contact Form ---------- */
-// 暂时禁用 AJAX 提交，改用 FormSubmit 标准跳转模式以触发激活邮件
-/*
 const contactForm = document.querySelector('#inquiry-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -166,7 +164,6 @@ if (contactForm) {
     });
   });
 }
-*/
 
 /* ---------- Product Category Filter ---------- */
 const catTabs = document.querySelectorAll('.cat-tab');
