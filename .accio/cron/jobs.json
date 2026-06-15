@@ -8,7 +8,7 @@
       "enabled": true,
       "deleteAfterRun": false,
       "createdAtMs": 1778049332056,
-      "updatedAtMs": 1780888876567,
+      "updatedAtMs": 1781143931408,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 * * *",
@@ -20,10 +20,10 @@
         "agent": "general"
       },
       "state": {
-        "nextRunAtMs": 1780948800000,
-        "lastRunAtMs": 1780888874886,
+        "nextRunAtMs": 1781208000000,
+        "lastRunAtMs": 1781143929892,
         "lastStatus": "ok",
-        "lastDurationMs": 348
+        "lastDurationMs": 464
       },
       "target": {
         "type": "conversation",
@@ -41,7 +41,7 @@
       "enabled": true,
       "deleteAfterRun": false,
       "createdAtMs": 1778050054645,
-      "updatedAtMs": 1780888876574,
+      "updatedAtMs": 1781096400221,
       "schedule": {
         "kind": "cron",
         "expr": "0 21 * * *",
@@ -55,8 +55,8 @@
         }
       },
       "state": {
-        "nextRunAtMs": 1780923600000,
-        "lastRunAtMs": 1780888874541,
+        "nextRunAtMs": 1781182800000,
+        "lastRunAtMs": 1781096400112,
         "lastStatus": "ok",
         "lastDurationMs": 0
       },
@@ -77,7 +77,7 @@
       "enabled": true,
       "deleteAfterRun": false,
       "createdAtMs": 1778050384952,
-      "updatedAtMs": 1780888876584,
+      "updatedAtMs": 1781143931417,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 * * *",
@@ -89,10 +89,10 @@
         "agent": "main"
       },
       "state": {
-        "nextRunAtMs": 1780948800000,
-        "lastRunAtMs": 1780888874694,
+        "nextRunAtMs": 1781208000000,
+        "lastRunAtMs": 1781143929757,
         "lastStatus": "ok",
-        "lastDurationMs": 161
+        "lastDurationMs": 328
       },
       "target": {
         "type": "conversation",
